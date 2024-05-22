@@ -18,7 +18,7 @@ class WelcomeController extends Controller
 
     public function index()
     {
-        $tasks = Task::orderBy('created_at', 'desc')->get();
+        $tasks = Task::orderBy('start_date', 'desc')->get();
         return view('welcome', compact('tasks'));
     }
     

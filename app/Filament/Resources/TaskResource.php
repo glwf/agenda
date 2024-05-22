@@ -59,7 +59,6 @@ class TaskResource extends Resource
                 Forms\Components\DatePicker::make('start_date')
                     ->label('Tanggal')
                     ->prefix('Mulai')
-                    ->format('d/m/Y')
                     ->required(),
                 Forms\Components\TimePicker::make('start_time')
                     ->label('Waktu Mulai')
@@ -99,8 +98,8 @@ class TaskResource extends Resource
                 Tables\Columns\TextColumn::make('attendees')
                     ->label('Dihadiri'),
                 Tables\Columns\TextColumn::make('start_date')
-                ->label('Tanggal')
-                    ->date()->sortable()
+                    ->label('Tanggal')
+                    ->dateTime('d/m/Y')->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('start_time')
                     ->label('Waktu (mulai)')
