@@ -61,7 +61,10 @@ The project is a task management application designed to help users organize and
    ```sh
    php artisan db:seed
    ```
-
+9. Symbolic link
+   ```sh
+   php artisan storage:link
+   ```
 ### Usage
 
 1. Navigate to the application URL in your browser.
